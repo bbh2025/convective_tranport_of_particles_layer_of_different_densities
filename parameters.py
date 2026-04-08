@@ -37,9 +37,10 @@ def compute_u_vortex_exp(pixel_vertical, pixel_temps):
 	# Implementation for experimental computation
 	return pixel_vertical * 0.267112299e-3 / (pixel_temps / 50)
 
-print(compute_u_vortex_exp(101, 9))
-
 print(f"Computed U_vortex from experimental data: {compute_u_vortex_exp(101, 9):.6f} m/s")
 print(f"Computed U_vortex from experimental data: {compute_u_vortex_exp(104, 6):.6f} m/s")
 
 
+V_f = np.array([10e-3,20e-3,30e-3,40e-3,50e-3]) #m^3 (volume of the released fluid) 
+H_cyl = ((m_0/rho_p) + V_f) / (np.pi * R_cyl**2)
+print(f"Computed H_cyl for different V_f: {H_cyl}") 
