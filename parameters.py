@@ -35,7 +35,7 @@ Rouse_number = w_s/(U_vortex) #Rouse number of the released cloud
 def compute_u_vortex_exp(pixel_vertical, pixel_temps):
 	"""Compute U_vortex from experimental data."""
 	# Implementation for experimental computation
-	return pixel_vertical * 0.267112299e-2 / (pixel_temps / 50)
+	return pixel_vertical * 0.267112299e-3 / (pixel_temps / 50)
 
 print(compute_u_vortex_exp(101, 9))
 
